@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: setup docker
-        id: buildozer
+        id: run: docker pull kivy/buildozer:latest
         run: docker build . -t local -f tools/build/build_android.dockerfile
       - name: build with buildozer
         run: docker run -i -v $PWD:/srv -w/srv local /bin/bash ./tools/build/build_android.sh
