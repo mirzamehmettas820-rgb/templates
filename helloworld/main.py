@@ -1,17 +1,9 @@
-'''
-Simple Hello World app using kivy.
-- Show code for simple Hello World.
-- Github Actions to package for platforms
+from kivy.app import App
+from kivy.uix.label import Label
 
-
-- [ ] [Linux]
-- [ X ] [macOsX]
-- [ ] [Windows]
-- [ ] [Android]
-- [ ] [iOS]
-
-'''
+class BenimUygulamam(App):
+    def build(self):
+        return Label(text='Merhaba Dunya!')
 
 if __name__ == '__main__':
-    from app import HelloWorldApp
-    HelloWorldApp().run()
+    BenimUygulamam().run()
